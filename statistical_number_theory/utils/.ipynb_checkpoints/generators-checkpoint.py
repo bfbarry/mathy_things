@@ -24,19 +24,4 @@ def pi_dig(prec):
     pi_dig = [int(i) for i in str(pi)[2:]]
     return pi_dig
 
-def rational_num_dig(num, denom, prec):
-    decimal.getcontext().prec = prec
-    d = str(decimal.Decimal(num) / decimal.Decimal(denom))[2:]
-    return [i for i in d]
-
-def sqrt_dig(num, prec, dec = True):
-    """If dec = True, only returns digits to the right of the decimal place"""
-    decimal.getcontext().prec = prec
-    d = str(decimal.Decimal(num)**decimal.Decimal(.5)) #math.sqrt doesn't work for this
-    
-    if dec == True:
-        d = d[d.index('.')+1:]
-    else:
-        d = d.replace('.','')
-    
-    return [i for i in d]
+pi = pi_dig(2000)
