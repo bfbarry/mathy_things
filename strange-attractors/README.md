@@ -1,0 +1,1 @@
+Originally a clone of Dr. Boeing's [Lorenz System](https://github.com/gboeing/lorenz-system)
